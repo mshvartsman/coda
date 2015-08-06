@@ -249,7 +249,7 @@ function (stem = "", start, end, thin, quiet = FALSE)
 }
 
 "read.coda" <- function (output.file, index.file, start, end, thin,quiet=FALSE) {
-  index <- read.table(index.file,
+  index <- read.table(index.file,sep="\t",
                       row.names = 1, col.names = c("", "begin", "end"))
   vnames <- row.names(index)
   if (is.R()) {
